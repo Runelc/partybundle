@@ -1,0 +1,207 @@
+/* Kvadrat knap styling  */
+.buttonBig,
+.button {
+	background: linear-gradient(#ff6cee, #777eff);
+	width: 140px;
+	height: 140px;
+	aspect-ratio: 1;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	transition: scale 0.2s, box-shadow 0.2s;
+	position: relative;
+}
+
+/* Stor rektangel knap til focus */
+.buttonLong {
+	background: linear-gradient(#ff6cee, #777eff);
+	width: 300px;
+	height: 80px;
+	aspect-ratio: 1;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	transition: scale 0.2s, box-shadow 0.2s;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.buttonLongBg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	isolation: isolate;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.12;
+}
+
+/* Generel lille rektangel knap */
+.button {
+	aspect-ratio: 0;
+	border-radius: 10px;
+	justify-content: center;
+	width: 200px;
+	height: fit-content;
+	padding: 0.6rem 0;
+}
+
+.buttonBig:hover,
+.buttonLong:hover,
+.button:hover {
+	scale: 1.02;
+	box-shadow: 0 0 10px rgba(217, 0, 255, 0.5);
+}
+
+/* Baggrundsbillede på knap */
+.buttonImage {
+	height: 50%;
+	display: block;
+	margin: auto 0;
+}
+
+/* Styling af text på knapperne */
+.buttonText {
+	font-weight: 800;
+	color: white;
+	text-align: center;
+	font-size: 1.1rem;
+	margin: 0;
+	margin-bottom: 0.7rem;
+	user-select: none;
+	isolation: isolate;
+	z-index: 1;
+}
+
+/* Placering af knapper */
+.buttonSmall {
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+}
+
+.button .buttonText {
+	margin: 0;
+	font-size: 1.2rem;
+	user-select: none;
+}
+
+.buttonFixed {
+	position: fixed !important;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* Class til at disable knapper */
+.buttonDisabled {
+	pointer-events: none;
+	user-select: none;
+	overflow: hidden;
+	position: relative;
+}
+.buttonDisabled::after {
+	content: "";
+	background-color: rgb(197, 197, 197);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+}
+.buttonDisabled:hover {
+	scale: 1;
+	box-shadow: 0 0 0px transparent;
+}
+
+/* Centrering af knapper */
+.centerAbsolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	isolation: isolate;
+	z-index: 2;
+}
+
+.fitWidth {
+	width: fit-content !important;
+	padding: 0.5rem 1rem;
+}
+
+.buttonReward {
+	width: 100%;
+	min-height: 90px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	background: linear-gradient(#ce6cff, #7c77ff);
+	overflow: hidden;
+}
+
+/* knapper under reward siden */
+.buttonRewardBg {
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	isolation: isolate;
+	z-index: 2;
+}
+
+.buttonReward img {
+	height: 100%;
+	width: 100%;
+	max-height: 50px;
+	max-width: 50px;
+	margin-left: 20px;
+}
+
+.rewardTextWrap {
+	margin-left: 20px;
+}
+.rewardPrize {
+	font-size: 1.3rem;
+	margin: 0;
+	font-weight: 600;
+	text-align: left;
+	padding: 0;
+}
+
+.rewardSponsor {
+	font-size: 0.8rem;
+	color: rgb(225, 225, 225);
+	margin: 0;
+	text-align: left;
+	padding: 0;
+}
+
+.rewardExpire {
+	margin-left: auto;
+	margin-right: 10px;
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.rewardExpire img {
+	width: 20px;
+	margin: 0;
+}

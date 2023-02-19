@@ -1,0 +1,280 @@
+/* Generel styling af HTML */
+/* Deklaration af globale css variabler */
+:root {
+	--margin: 20px;
+	font-family: articulat-cf, sans-serif;
+	overflow-x: hidden;
+}
+
+* {
+	font-family: articulat-cf, sans-serif;
+	text-size-adjust: none;
+	color: white;
+	-webkit-tap-highlight-color: transparent;
+	line-height: 1.5rem;
+}
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	background: linear-gradient(#7685ff, #acdfff);
+	height: fit-content;
+	width: 100vw;
+	max-width: 400px;
+	overflow-x: hidden;
+}
+
+#root {
+	min-height: 100vh;
+	position: relative;
+}
+
+h1 {
+	font-size: 30px;
+	text-align: center;
+	padding: 5px;
+}
+
+p {
+	font-size: 20px;
+	text-align: center;
+	padding: 5px;
+}
+
+.bodyText {
+	font-size: 1.3rem;
+	text-align: center;
+	margin: 0 0 20px 0;
+	color: white;
+	font-weight: 200;
+}
+.buttonLink {
+	text-decoration: none;
+}
+
+.buttonLink:focus {
+	outline: none;
+}
+
+/* Mindste text på siden */
+small {
+	color: rgba(255, 255, 255, 0.651);
+	margin: 0;
+	margin-top: 5px;
+}
+
+/* Styling af alle labels på siden */
+label {
+	color: white;
+	font-size: 1.1rem;
+	margin: 30px 0 10px 0;
+}
+
+dialog {
+	border: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	background: linear-gradient(#65b7fd, #3cacfd);
+	width: calc(100% - 40px);
+	max-width: 450px;
+	box-sizing: border-box;
+}
+
+/* Styling af specefikke dialog boxe */
+#settingsDialog {
+	background: linear-gradient(#8748ff, #9a10ff) !important;
+}
+#statisticsDialog {
+	background: linear-gradient(#ff48a4, #ff107e) !important;
+}
+#rulesDialog {
+	background: linear-gradient(#ffbb4e, #ff9428) !important;
+}
+
+dialog::backdrop {
+	/* cursor: pointer; */
+	background-color: #00000031;
+	backdrop-filter: blur(2px);
+}
+
+dialog h2 {
+	color: white;
+	text-align: center;
+	margin: 0;
+	font-weight: 700;
+}
+
+.dialogContainer,
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dialogClose {
+	width: 1.1rem;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	padding: 20px;
+	cursor: pointer;
+}
+
+/* Styling til kamera ikon*/
+.uploadPhotoContainer {
+	height: 100px;
+	width: 100px;
+	position: relative;
+	outline: 2px solid white;
+	border-radius: 1rem;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+#uploadPhoto {
+	font-size: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	position: absolute;
+	isolation: isolate;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.uploadCamera {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	width: 80px;
+	transform: translate(-50%, -50%);
+	isolation: isolate;
+	z-index: -1;
+}
+
+.camPlus {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	width: 20px;
+	isolation: isolate;
+	z-index: -1;
+}
+
+/* Opsætning til uploading af billede */
+input[type="text"],
+input[type="email"] {
+	font-size: 1.1rem;
+	border: none;
+	border-radius: 8px;
+	padding: 5px 10px;
+	background-color: transparent;
+	border: 2px solid white;
+	caret-color: white;
+	color: white;
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+	color: rgba(255, 255, 255, 0.493);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+	outline: none;
+}
+
+#playerName {
+	display: block;
+	width: 80%;
+	max-width: 200px;
+}
+
+.dialogBtn {
+	border: none;
+	background-color: transparent;
+	margin-top: 30px;
+	color: white;
+	cursor: pointer;
+}
+
+#imagePreview {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	object-fit: cover;
+}
+
+.centerContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--margin);
+}
+
+.dialogRules {
+	text-align: left;
+	padding: 20px;
+	max-height: 60vh;
+}
+
+.rulesContainer {
+	overflow-y: scroll;
+	max-height: 60vh;
+}
+
+.rulesContainer > * {
+	text-align: left;
+}
+
+.rulesContainer ul {
+	text-align: left;
+	margin: 0;
+	padding-left: 20px;
+}
+
+.rulesContainer h4 {
+	font-size: 20px;
+}
+
+.rulesContainer h5 {
+	font-size: 18px;
+}
+
+.rulesContainer p {
+	font-size: 16px;
+	padding: 0;
+	text-align: left;
+}
+
+.statsTime {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.statsH3 {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.timeSpent {
+	display: flex;
+	margin-top: 10px;
+}
+.hiScore {
+	margin-top: 10px;
+}
+.timeSpent p,
+.hiScore p {
+	margin: 0;
+	font-size: 1.05rem;
+}
+
+.hiScore p {
+	font-weight: 100;
+}
+
+.hiScore b {
+	margin-right: 10px;
+	font-weight: 300;
+}
